@@ -9,9 +9,9 @@
   <title>Hexo</title>
   <meta name="description" content="" />
   <meta property="og:title" content="Hexo" />
-  <meta property="og:url" content="http://example.com" />
+  <meta property="og:url" content="http://example.com/2024/04/04/first/" />
   <meta property="og:image" content="http://example.com/img/default.jpg" />
-  <meta property="og:type" content="website" />
+  <meta property="og:type" content="article" />
   <meta property="og:description" content="" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -32,21 +32,22 @@
   </div></a
 >
 
-    <main><div class="cards-grid">
-   <div class="card-container">
-  <a href="/2024/04/04/first/" class="regular-link">
-    <div class="card-summary-container" data-augmented-ui="border tl-clip tr-clip bl-round br-round">
-      <div class="card-title" data-augmented-ui="border tl-clip tr-clip"></div>
-      
-      <p class="card-summary"></p>
+    <main><div class="post_container">
+  <div class="post_container-wrapper" data-augmented-ui="border tl-clip tr-clip bl-clip br-clip">
+    <div class="post-title" data-augmented-ui="border tl-clip tr-clip"></div>
+    
+    <div class="post-content"></div>
+    <div class="post-date" onclick="scrollToTop()" data-augmented-ui="border bl-clip br-clip">
+      2024-04-04
     </div>
-  </a>
+  </div>
 </div>
- 
-</div>
-<div style="padding-bottom: 20px">
-   
-</div>
+
+<script>
+  function scrollToTop() {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }
+</script>
 </main>
   </body>
 </html>
