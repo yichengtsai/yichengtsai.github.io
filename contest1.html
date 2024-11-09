@@ -11,8 +11,11 @@
             margin: 20px;
         }
         .container {
-            margin: 20px;
+            max-width: 800px; /* 設定最大寬度 */
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
         }
+        
         a {
             color: #1a73e8;
             text-decoration: none;
@@ -20,18 +23,54 @@
         a:hover {
             text-decoration: underline;
         }
+
+        .image {
+            float: right; /* 使圖片浮動到左側 */
+            margin-right: 200px; /* 左邊留空間 */
+            width: 350px; /* 設定圖片寬度 */
+            height: auto; /* 自動調整高度 */
+        }
     </style>
 </head>
 <body>
-    <a href="index.html">回到首頁</a>
+    <a href="web.html">回到首頁</a>
     <div class="header">
         <h1>比賽 1 - FIRST LEGO League 機器人台灣選拔賽</h1>
         <img src="https://github.com/yichengtsai/yichengtsai.github.io/blob/main/photo/fll-logo-horizontal.png?raw=true" alt="FLL Logo" width="200" height="auto">
+        <img src="https://github.com/yichengtsai/yichengtsai.github.io/blob/main/photo/FLL_personal.jpg?raw=true" class="image">
     </div>
     <div class="container">
-        <p>這是我參加的第一場機器人競賽的經歷。在這場比賽中，我學到了如何設計機器人的結構，並提升了編程技能。</p>
-        <p>比賽的主要挑戰是編寫穩定的控制代碼，並使用 Raspberry Pi 與感測器進行資料處理。</p>
-        
+        <h2>程式部分</h2>
+        <h3>SYNC</h3>
+        <p>功能:使兩顆馬達能做到同步運行</p>
+        <p>公式:</p>
+        <img src="https://github.com/yichengtsai/yichengtsai.github.io/blob/main/program_photo/sync%E5%85%AC%E5%BC%8F.png?raw=true" width="300" height="auto">
+        <p>程式部分:</p>
+        <img src="https://github.com/yichengtsai/yichengtsai.github.io/blob/main/program_photo/sync.png?raw=true" alt="Code" width="500" height="auto">
+    
+        <h3>motorSpeedRampSync</h3>
+        <p>功能:使兩顆馬達能夠在高速移動下穩定前進</p>
+        <p>公式:</p>
+        <img src="https://github.com/yichengtsai/yichengtsai.github.io/blob/main/program_photo/%E7%B7%A9%E5%8A%A0%E6%B8%9B%E5%90%8C%E6%AD%A5%E6%8E%A7%E5%88%B6%E5%85%AC%E5%BC%8F.png?raw=true" width="600" height="auto">
+        <p>程式部分:</p>
+        <img src="https://github.com/yichengtsai/yichengtsai.github.io/blob/main/program_photo/motorspeedrampsync.png?raw=true" alt="Code" width="700" height="auto">
+
+        <div class="problem">
+            <h2>遇到的問題</h2>
+            <ol>
+                <li>光源感測器讀取速度過慢。</li>
+                <li>機器在高速移動下不穩定。</li>
+            </ol>
+        </div>
+    
+        <div class="solution">
+            <h2>解決辦法</h2>
+            <ol>
+                <li>讀取原始數值作為應用，這樣可以加快讀取速度並減少延遲。</li>
+                <li>使用馬達緩加減速同步控制函數，通過逐步增減功率來保持系統的穩定性。</li>
+            </ol>
+        </div>
+
     </div>
 </body>
 </html>

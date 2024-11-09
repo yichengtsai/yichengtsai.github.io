@@ -11,8 +11,11 @@
             margin: 20px;
         }
         .container {
-            margin: 20px;
+            max-width: 800px; /* 設定最大寬度 */
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
         }
+
         a {
             color: #1a73e8;
             text-decoration: none;
@@ -20,13 +23,22 @@
         a:hover {
             text-decoration: underline;
         }
+
+        .image {
+            float: right; /* 使圖片浮動到左側 */
+            margin-right: 200px; /* 左邊留空間 */
+            width: 300px; /* 設定圖片寬度 */
+            height: auto; /* 自動調整高度 */
+        }
     </style>
 </head>
 <body>
-    <a href="index.html">回到首頁</a>
+
+    <a href="web.html">回到首頁</a>
     <div class="header">
         <h1>比賽 2 - WRO國際奧林匹亞機器人高中組競賽</h1>
         <img src="https://raw.githubusercontent.com/yichengtsai/yichengtsai.github.io/41b4162d46d55e40504a5e9bdad43f4e181cd3ba/photo/WRO_image.svg" alt="WRO Logo" width="200" height="70">
+        <img src="https://github.com/yichengtsai/yichengtsai.github.io/blob/main/photo/%E7%AB%B6%E8%B3%BD_personal.png?raw=true" class="image">
     </div>
     <div class="container">
         <p>這是我參加的第一場機器人競賽的經歷。在這場比賽中，我學到了如何設計機器人的結構，並提升了編程技能。</p>
